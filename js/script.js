@@ -6,3 +6,4 @@ console.log('Hello, ' + name);
 /* 
 komentarze
 */
+

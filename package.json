@@ -7,7 +7,7 @@
     "test": "parallelshell \"npm run test:html\" \"npm run test:js\"",
     "test:html": "glob-run nu-html-checker *.html",
     "test:js": "glob-run jshint js/*.js",
-    "init-project": "npm run init:dirs && npm run init:files && npm run init:gitignore && npm run init:npm-install",
+    "init-project": "npm config set loglevel warn && npm run init:dirs && npm run init:files && npm run init:gitignore && npm run init:npm-install",
     "init:dirs": "mkdir -p sass css vendor images js",
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
@@ -23,7 +23,7 @@
     "watch:autoprefixer": "node_modules/.bin/onchange.cmd css/style.scss -- autoprefixer-cli -o css/style.prefixed.css css/style.css",
     "watch:sassprefixer": "parallelshell \"npm run watch:autoprefixer\" \"npm run watch:sass\" ",
     "install": "npm install --save parallelshell && npm run install:all",
-    "install:all": "parallelshell \"npm install --save autoprefixer-cli\" \"npm install --save glob-run\" \"npm install --save node-sass\" \"npm install --save nu-html-checker\" \"npm install --save onchange\" \"npm run install --save rimraf\" \"npm install --save jshint\""
+    "install:all": "npm install --save autoprefixer-cli && npm install --save glob-run && npm install --save node-sass && npm install --save nu-html-checker && npm install --save onchange && npm run install --save rimraf && npm install --save jshint"
   },
   "keywords": [],
   "author": "",

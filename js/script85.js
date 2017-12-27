@@ -1,7 +1,7 @@
-var wys = prompt('Podaj wysokość trójkąta w cm');
-var pods = prompt('Podaj podstawę trójkąta w cm');
+var TriangleHight = prompt('Podaj wysokość trójkąta w cm');
+var TriangleBase = prompt('Podaj podstawę trójkąta w cm');
 
-    triangleArea = wys*pods/2;
+    triangleArea = TriangleHight*TriangleBase/2;
 
 
 
